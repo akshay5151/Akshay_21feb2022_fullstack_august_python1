@@ -1,6 +1,6 @@
-const intialState = 2500701 ;
+const intialState = 100000 ;
 
-const decrementNumber=(state= intialState , action)=>{
+const decrementNumber=(state= intialState, action)=>{
     switch(action.type){
     case "DECREMENT5" : return state - 5000;
     case "DECREMENT10" : return state - 10000;

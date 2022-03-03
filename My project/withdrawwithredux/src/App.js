@@ -5,11 +5,12 @@ import "./App.css";
 function App() {
 
   const mystate = useSelector((state)=>state.decrementNumber)
+
   const dispatch = useDispatch();
   return (
     <>
       <div className="App">
-        <img className="App__userpic" src={"https://image.ibb.co/nC8vGp/girl.png"} alt="photographer" />
+        <img className="App__userpic" src={"https://media-exp1.licdn.com/dms/image/C5103AQG2TR-fmSDrDA/profile-displayphoto-shrink_200_200/0/1569928864541?e=1651708800&v=beta&t=F_GtctLkAtUqCAaye3IELSInNxRmMc7SbSAgmT39qcM"} alt="photographer" />
         <p className="App__username">Hello, Akshay </p>
         <div className="App__amount">
           <p> ${mystate}</p>
@@ -17,8 +18,8 @@ function App() {
         </div>
 
         <section className="App__buttons">
-          <button onClick={()=>dispatch(action.decNumberTen())}>WITHDRAW $10,000</button>
-          <button onClick={()=>dispatch(action.decNumberfive())}>WITHDRAW $5,000</button>
+          <button disabled={mystate <= 10000} onClick={()=>dispatch(action.decNumberTen())}>WITHDRAW $10,000</button>
+          <button disabled={mystate <= 5000} onClick={()=>dispatch(action.decNumberfive())}>WITHDRAW $5,000</button>
           <button onClick={()=>dispatch(action.makeItZero())}>Give to the Charity</button>
         </section>
 

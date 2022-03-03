@@ -53,8 +53,8 @@
 
 .App__buttons > button {
   outline: 0;
-  background: #fff;
-  color: #fe718f;
+  background: rgb(112, 169, 235);
+  color: #110205;
   font-size: 1rem;
   padding: 1rem;
   margin: 1rem;
